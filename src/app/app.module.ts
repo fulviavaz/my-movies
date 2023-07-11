@@ -1,35 +1,34 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './shared/components/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './components/home/home.component';
-import { FilmesComponent } from './components/filmes/filmes.component';
-import { NavComponent } from './components/nav/nav.component';
-import { RouterModule, Routes } from '@angular/router';
-import { routes } from './routes'
-import {MatToolbarModule} from '@angular/material/toolbar';
-
-
+import { MaterialModule } from './material.module';
+import { FilmsComponent } from './components/pages/films/films.component';
+import { StarshipsComponent } from './components/pages/starships/starships.component';
+import { HomeComponent } from './components/pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    FilmesComponent,
-    NavComponent
+    HeaderComponent,
+    FilmsComponent,
+    StarshipsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes),
-    MatToolbarModule,
+    MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-
-
 export class AppModule { }
