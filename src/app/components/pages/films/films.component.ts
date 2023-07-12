@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { SwapiService } from 'src/app/services/swapi.service';
 import { Filme } from 'src/app/shared/models/interfaces';
